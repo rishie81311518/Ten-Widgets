@@ -19,33 +19,27 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.red,
-                  height: 250,
-                  child: Center(child: Text('Container 2')),
-                ),
-              ),
-              Expanded(
-                flex: 3,
-                child: Center(
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Colors.red,
-                          width: 1,
-                        ),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                                'https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY='))),
-                    child: Center(child: Text('Hello Everyone')),
+              SizedBox(
+                child: Stack(
+                  alignment: Alignment.center,
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    color: Colors.red,
                   ),
-                ),
+                  Container(
+                    height: 150,
+                    width: 150,
+                    color: Colors.green,
+                  ),
+
+                  Positioned(child: Text('Rishie'))
+                ],
+                )
+                ,
               ),
+
             ],
           )),
     );
