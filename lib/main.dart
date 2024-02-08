@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,9 +16,18 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.blue,
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: const [
+              SizedBox(
+                height: 100,
+              ),
+              Divider(color: Colors.black,thickness: .5,),
+              SizedBox(
+                height: 100,
+                child: VerticalDivider(color: Colors.black,),
+              ),
+              Divider(color: Colors.black,thickness: .5,),
               Center(
                 child: CircleAvatar(
                   radius: 100,
