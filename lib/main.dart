@@ -19,26 +19,13 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
-                child: Stack(
-                  alignment: Alignment.center,
-                children: [
-                  Container(
-                    height: 200,
-                    width: 200,
-                    color: Colors.red,
-                  ),
-                  Container(
-                    height: 150,
-                    width: 150,
-                    color: Colors.green,
-                  ),
-
-                  Positioned(child: Text('Rishie'))
-                ],
-                )
-                ,
-              ),
+              Center(
+                child: CircleAvatar(
+                  radius: 100,
+                  backgroundColor: Colors.black,
+                  backgroundImage: NetworkImage('https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY='),
+                ),
+              )
 
             ],
           )),
