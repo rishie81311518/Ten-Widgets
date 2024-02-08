@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,26 +16,23 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.blue,
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              SizedBox(
-                height: 100,
-              ),
-              Divider(color: Colors.black,thickness: .5,),
-              SizedBox(
-                height: 100,
-                child: VerticalDivider(color: Colors.black,),
-              ),
-              Divider(color: Colors.black,thickness: .5,),
-              Center(
-                child: CircleAvatar(
-                  radius: 100,
-                  backgroundColor: Colors.black,
-                  backgroundImage: NetworkImage('https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY='),
-                ),
-              )
-
+            children: [
+              RichText(
+                  text: TextSpan(
+                      text: 'Hello',
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(fontSize: 50),
+                      children: [
+                    TextSpan(
+                        text: 'world',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 24)),
+                    TextSpan(
+                        text: 'flutter',
+                        style: TextStyle(
+                            fontWeight: FontWeight.normal, fontSize: 24)),
+                  ]))
             ],
           )),
     );
